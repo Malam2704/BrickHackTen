@@ -8,6 +8,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import './App.css'; // Ensure you have this if you're storing custom styles here
 import { Box, Typography } from '@mui/material';
 import { blue } from '@mui/material/colors';
+import ParkingLotDetail from './ParkingLotDetail'
+import parkingLotsData from './parkingLotsData.json';
+
 
 // const ritBounds = [
 //     [43.0826, -77.6802], // Southwest coordinates
@@ -24,6 +27,9 @@ import { blue } from '@mui/material/colors';
 const MapComponent = () => {
     const [parkingLots, setParkingLots] = useState([]);
     const [showPercentage, setShowPercentage] = useState(false);
+    const [selectedLotId, setSelectedLotId] = useState(null);
+    const [detailPopupOpen, setDetailPopupOpen] = useState(false);
+
 
     useEffect(() => {
         setParkingLots(parkingData.parkingLots);
@@ -44,9 +50,20 @@ const MapComponent = () => {
         });
     };
 
+    const onLotClick = (lotId) => {
+        console.log(`Parking lot ${lotId} was clicked`);
+        setSelectedLotId(lotId);
+        setDetailPopupOpen(true); // Open the details popup
+    };
+
+    const handleCloseDetailPopup = () => {
+        setDetailPopupOpen(false);
+    };
+
+
     return (
         <div>
-            <MapContainer center={[43.0848, -77.6744]} zoom={16} style={{ height: '100vh', width: '100%' }}>
+            <MapContainer center={[43.0848, -77.6744]} zoom={16} style={{ height: '94vh', width: '100%' }}>
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 {/* <SetViewToBounds /> */}
                 {parkingLots.map(lot => (
@@ -54,6 +71,9 @@ const MapComponent = () => {
                         key={lot.id}
                         position={lot.coordinates}
                         icon={createCustomMarker(lot.availableSpots, lot.totalSpots)}
+                        eventHandlers={{
+                            click: () => onLotClick(lot.id),
+                        }}
                     />
                 ))}
             </MapContainer>
@@ -88,7 +108,12 @@ const MapComponent = () => {
                     sx={{ m: 0, p: 0, '& .MuiTypography-root': { flexGrow: 1 } }}
                 />
             </Box>
-
+            <ParkingLotDetail
+                selectedLotId={selectedLotId}
+                parkingLots={parkingLotsData}
+                open={detailPopupOpen}
+                onClose={handleCloseDetailPopup}
+            />
         </div>
     );
 };

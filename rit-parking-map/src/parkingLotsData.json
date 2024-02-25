@@ -1,0 +1,198 @@
+[
+    {
+        "id": "F",
+        "name": "F Lot",
+        "coordinates": [
+            43.08685473682115,
+            -77.67819997570587
+        ],
+        "rows": 3,
+        "columns": 10,
+        "spots": [
+            {
+                "id": "F1",
+                "isAvailable": true
+            },
+            {
+                "id": "F2",
+                "isAvailable": false
+            },
+            {
+                "id": "F3",
+                "isAvailable": true
+            },
+            {
+                "id": "F4",
+                "isAvailable": true
+            },
+            {
+                "id": "F5",
+                "isAvailable": false
+            },
+            {
+                "id": "F6",
+                "isAvailable": true
+            },
+            {
+                "id": "F7",
+                "isAvailable": false
+            },
+            {
+                "id": "F8",
+                "isAvailable": true
+            },
+            {
+                "id": "F9",
+                "isAvailable": true
+            },
+            {
+                "id": "F10",
+                "isAvailable": true
+            },
+            {
+                "id": "F1",
+                "isAvailable": true
+            },
+            {
+                "id": "F2",
+                "isAvailable": false
+            },
+            {
+                "id": "F3",
+                "isAvailable": true
+            },
+            {
+                "id": "F4",
+                "isAvailable": true
+            },
+            {
+                "id": "F5",
+                "isAvailable": false
+            },
+            {
+                "id": "F6",
+                "isAvailable": true
+            },
+            {
+                "id": "F7",
+                "isAvailable": false
+            },
+            {
+                "id": "F8",
+                "isAvailable": true
+            },
+            {
+                "id": "F9",
+                "isAvailable": true
+            },
+            {
+                "id": "F10",
+                "isAvailable": true
+            },
+            {
+                "id": "F1",
+                "isAvailable": true
+            },
+            {
+                "id": "F2",
+                "isAvailable": false
+            },
+            {
+                "id": "F3",
+                "isAvailable": true
+            },
+            {
+                "id": "F4",
+                "isAvailable": true
+            },
+            {
+                "id": "F5",
+                "isAvailable": false
+            },
+            {
+                "id": "F6",
+                "isAvailable": true
+            },
+            {
+                "id": "F7",
+                "isAvailable": false
+            },
+            {
+                "id": "F8",
+                "isAvailable": true
+            },
+            {
+                "id": "F9",
+                "isAvailable": true
+            },
+            {
+                "id": "F10",
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": "Lot B",
+        "name": "Lot B",
+        "coordinates": [
+            43.08196216226093,
+            -77.68018647265258
+        ],
+        "rows": 20,
+        "columns": 10,
+        "spots": [
+            {
+                "id": "B1",
+                "isAvailable": false
+            },
+            {
+                "id": "B2",
+                "isAvailable": true
+            },
+            {
+                "id": "B3",
+                "isAvailable": false
+            },
+            {
+                "id": "B4",
+                "isAvailable": true
+            },
+            {
+                "id": "B5",
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": "PM",
+        "name": "Polissini Mini",
+        "coordinates": [
+            43.081971380368536,
+            -77.67476039347474
+        ],
+        "rows": 1,
+        "columns": 5,
+        "spots": [
+            {
+                "id": "PM1",
+                "isAvailable": true
+            },
+            {
+                "id": "PM2",
+                "isAvailable": true
+            },
+            {
+                "id": "PM3",
+                "isAvailable": true
+            },
+            {
+                "id": "PM4",
+                "isAvailable": true
+            },
+            {
+                "id": "PM5",
+                "isAvailable": true
+            }
+        ]
+    }
+]
